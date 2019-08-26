@@ -1,28 +1,30 @@
 #! /usr/bin/perl  
 # use strict;
 
+open FH,"<E:\\Perl\\newlog.txt";
+$line  = <FH>;
+print $line;
 
-#Program to convert from dec to binary
-
-print "Enter a number to convert: ";
-
-chomp(my $decimal = <STDIN>);
-
-print "\nConverting $decimal to binary...\n";
-my @array;
-my $num;
-while($decimal >= 1)
-{
-if($decimal == 1) {
-    $num .= 1;
-    last;
+my $file = "E:\\Perl\\newlog.txt";
+my %count;
+my @count1 = undef;
+my $file = shift or die "Usage: $0 FILE\n";
+open my $fh, '<', $file or die "Could not open '$file' $!";
+while (my $line = <$fh>) {
+    chomp $line;
+    foreach my $str (split /\s+/, $line) {
+        $count{$str}++;
+		# print "word count ";
+	# print $str;
+	# print " " . $count{$str} . "\n";
+	
+    }
+	
+}
+ my @array;
+foreach my $str (sort keys %count) {
+    printf "%-31s %s\n", $str, $count{$str};
+	push (@array,$count{$str});
 }
 
-my $remainder = $decimal%2;
-$num .= $remainder;
-$decimal = $decimal/2;
-}
-
-print $num."\n";
-$revnum = reverse($num);
-print $revnum."\n";
+print "\n\n @array\n\n...";

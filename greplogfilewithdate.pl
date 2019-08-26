@@ -3,7 +3,6 @@ use warnings;
 use strict;
 use Cwd qw(abs_path);
 
-use Cwd qw(abs_path);
 use File::Find qw(find);
 
 my $folder;
@@ -12,6 +11,7 @@ die "no date provided " unless defined $ARGV[1];
 my $path = abs_path $ARGV[0];
 my $date = $ARGV[1];
 
+print "\n\n$path\n\n";
 print "$date\n";
 search_all_folder($path);
 

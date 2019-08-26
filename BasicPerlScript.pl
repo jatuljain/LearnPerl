@@ -142,7 +142,7 @@ print PerlPractice::add(3 ,4 , 5, 6,7);
 #----------------------------------------------------------------------------------------------------------------------------------------------------
 
 # # # Description:	This short script displays the prime numbers found in a range given by the user.
-# # # How it works: The user inputs the range $o to $e. A for command checks every number from $o to $e. For each number that evenly goest into the tested number ( if($i % $j==0) ), the script adds the factor ($j) into an array (@prime) at the $p position. $p starts at zero, and increases by 1 with every factor placed in @prime. If the second position of @prime is equal to the tested number, the tested number is prime.
+# # # How it works: The user inputs the range $o to $e. A for command checks every number from $o to $e. For each number that evenly goes into the tested number ( if($i % $j==0) ), the script adds the factor ($j) into an array (@prime) at the $p position. $p starts at zero, and increases by 1 with every factor placed in @prime. If the second position of @prime is equal to the tested number, the tested number is prime.
 # # # #! Perl
 
 # print "Find primes from: ";
@@ -199,7 +199,7 @@ print PerlPractice::add(3 ,4 , 5, 6,7);
 
  # # }
 
-# # ---------------------------------------------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------------------------
 # # To search an IP in text file and change it to other IP.
 # my $newIP = 20.20.20.20;
 # my $string = "";
@@ -226,16 +226,19 @@ print PerlPractice::add(3 ,4 , 5, 6,7);
 # close FH;
 # close FHW;
 
+#------------------------------------------------------------------------------------------------------------------------------------
 
- # my @arr11= sort values %count ;
+# my @arr11= sort values %count ;
 # my $max= $arr11[$#arr11];
 # foreach my $a (keys %count){
 # if($count{$a} == $max){
 # print "max key is",$a;
 # }
 # }
+#------------------------------------------------------------------------------------------------------------------------------------
 
 
+#### Count of each word in a file
 # open FH,"<D:\\Project\\Perl\\newlog.txt";
 # $line  = <FH>;
 # print $line;
@@ -264,7 +267,7 @@ print PerlPractice::add(3 ,4 , 5, 6,7);
 
 # print "\n\n @array\n\n...";
 
-
+#------------------------------------------------------------------------------------------------------------------------------------
 
 
 
